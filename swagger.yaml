@@ -1,0 +1,26 @@
+swagger: "2.0"
+info:
+  description: Swagger
+  version: "1.0.0"
+  title: Dean's Swagger
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+paths:
+  /fantasy_pl:
+    get:
+      operationId: "fantasy_pl.next_deadline"
+      tags:
+       - "Fantasy PL"
+      summary: "Timestamp for the next upcoming gameweek deadline"
+      description: "Get the next gameweek deadline"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            type: "string"
+
